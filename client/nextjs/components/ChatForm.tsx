@@ -1,11 +1,23 @@
 import styled from "@emotion/styled";
+import { FormEvent, useState } from "react";
+
 import Button from "./Common/Button";
 import Input from "./Common/Input";
 
-const ChatForm = () => {
+interface ChatFormProps {
+  onSubmit: (event: FormEvent<HTMLFormElement>, value: any) => void;
+}
+
+const ChatForm = ({ onSubmit }: ChatFormProps) => {
+  const [message, setMessage] = useState("");
+
   return (
-    <ChatFormWrapper>
-      <Input label="채팅" placeholder="채팅을 입력해주세요" />
+    <ChatFormWrapper onSubmit={(event) => onSubmit(event, message)}>
+      <Input
+        label="채팅"
+        placeholder="채팅을 입력해주세요"
+        onChange={({ target: { value } }) => setMessage(value)}
+      />
       <Button>입력</Button>
     </ChatFormWrapper>
   );

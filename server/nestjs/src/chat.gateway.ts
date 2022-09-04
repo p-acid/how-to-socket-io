@@ -6,7 +6,7 @@ import {
 } from '@nestjs/websockets';
 import { Server } from 'http';
 
-@WebSocketGateway(3001)
+@WebSocketGateway()
 export class ChatGateWay {
   @WebSocketServer()
   server: Server;
