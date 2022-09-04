@@ -2,9 +2,9 @@
 
 [Nest.js](https://docs.nestjs.com/)를 활용하여 구현한 Socket.io 레포지토리입니다.
 
-## Install
+# Build
 
-### Nest Project
+## Nest Project
 
 ```sh
 # 홈 디렉토리에서 nestjs cli 전역 설치
@@ -17,7 +17,7 @@ new nest .
 new nest [project-name]
 ```
 
-### Dependencies
+## Dependencies
 
 ```sh
 yarn add @nestjs/websockets @nestjs/platform-socket.io
