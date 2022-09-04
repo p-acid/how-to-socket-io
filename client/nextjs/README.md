@@ -14,5 +14,9 @@ yarn create next-app --typescript
 ## Dependencies
 
 ```sh
+# socket.io
+yarn add socket.io-client
 
+# styling
+yarn add @emotion/react @emotion/styled
 ```
