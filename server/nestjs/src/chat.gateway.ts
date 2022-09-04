@@ -4,11 +4,12 @@ import {
   WebSocketGateway,
   WebSocketServer,
 } from '@nestjs/websockets';
+import { Server } from 'http';
 
-@WebSocketGateway()
+@WebSocketGateway(3001)
 export class ChatGateWay {
   @WebSocketServer()
-  server;
+  server: Server;
 
   @SubscribeMessage('message')
   handleMessage(@MessageBody() message: string): void {
